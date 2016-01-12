@@ -9,5 +9,4 @@ if [ -d tmp ] ; then
 fi
 
 mkdir tmp
-cd tmp
 echo "Done!"
