@@ -21,6 +21,12 @@ You need Git installed on your Raspberry Pi computer. You can install it using t
 $ sudo apt-get install git
 ```
 
+Finally, Raspbian dosn't include 'dig' tool for DNS requests. Install it using:
+
+```
+$ sudo apt-get install dnsutils
+```
+
 This project doesn't need installation, only clone this repository:
 
 ```

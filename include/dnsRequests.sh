@@ -8,7 +8,12 @@ if [ -z "$1" ]
     NUM=1
 fi
 
-#head -n $NUM top-1m.csv | cut -f2 -d "," | nslookup
-dig @80.58.0.33 $(head -n $1 top-1m.csv | cut -f2 -d ",")
+if [ -z "$2" ]
+  then
+	#head -n $NUM top-1m.csv | cut -f2 -d "," | nslookup
+	dig $2 $(head -n $1 top-1m.csv | cut -f2 -d ",")
+  else
+	dig $(head -n $1 top-1m.csv | cut -f2 -d ",")
+fi
 
 echo "Done!"
